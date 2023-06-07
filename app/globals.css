@@ -1,27 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.green__glow{
+    filter: drop-shadow(0 5px 10px rgba(74,222,128, 0.8));
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.yellow__glow{
+    filter: drop-shadow(0 5px 10px rgba(242,163,25,0.8));
+}
+
+.red__glow{
+    filter: drop-shadow(0 5px 10px rgba(239,71,66, 0.6));
+}
+
+circle{
+    fill: none;
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: correct 1s ease-in-out forwards;
+}
+@keyframes correct {
+    100%{
+        stroke-dashoffset: 100;
+    }
+}
+
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.circular-progress-correct{
+    background: conic-gradient(#4ade80, 3.6deg, #ededed 0deg);
+}
+
+@layer components{
+    .sidebar-list-item{
+        @apply flex items-center justify-start gap-2 my-1 px-2 py-1 cursor-pointer;
+    }
+    .sidebar-list-item.acitve{
+        @apply bg-gradient-to-br from-blue-500 to-blue-400 text-white rounded-lg;
+    }
+
+    .question-option-li{
+        @apply cursor-pointer inline-flex items-center justify-center w-full my-2 py-3 capitalize text-gray-700 bg-white rounded-md transition-all duration-150 hover:text-gray-800 hover:shadow-lg peer-checked:text-white peer-checked:bg-gradient-to-br peer-checked:from-blue-400 peer-checked:to-blue-500 peer-checked:shadow-lg;
+    }
+
+    .question-side-li{
+        @apply flex flex-row gap-2;
+    }
+
+    .navigation-btn{
+        @apply flex flex-row justify-center items-center gap-2 bg-gradient-to-br from-blue-400 to-blue-500 text-white font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-150 hover:shadow-xl hover:shadow-blue-400/40;
+    }
 }
