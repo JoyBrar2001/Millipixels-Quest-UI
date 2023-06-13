@@ -6,8 +6,12 @@ export default function Page() {
       <h1 className='text-5xl font-bold my-6'>Welcome to Quest Standup</h1>
         
       <p className="text-lg">
-        <Link href="/question">Go to Quesetion UI</Link><br />
-      <Link href="/dashboard">Go to Dashboard</Link>
+        <Link href="/welcome">Welcome Page</Link><br />
+        <Link href="/signup">Sign Up Page</Link><br />
+        <Link href="/login">Login Page</Link><br />
+        <Link href="/admin">Admin Dashboard</Link><br />
+        <Link href="/question">Quesetion UI</Link><br />
+        <Link href="/dashboard">Dashboard</Link>
       </p>
     </div>
   )

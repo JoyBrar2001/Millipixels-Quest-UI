@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .stats__button{
+        @apply bg-white flex justify-start items-center gap-2 pl-3 py-1.5 w-full rounded-lg shadow-sm font-semibold;
+    }
+    
+    .stats__button__hover{
+        @apply rounded-3xl text-white shadow-lg shadow-cyan-500/30;
+    }
+
+    .card1__card__styles{
+        @apply bg-white shadow-xl flex justify-center items-center flex-col gap-2 p-6 rounded-2xl;
+    }
+
+    .card1__card__styles-hover{
+        @apply text-white shadow-cyan-500/40;
+    }
+}
+

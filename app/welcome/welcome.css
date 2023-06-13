@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .button__styles{
+        @apply w-60 px-6 py-4 bg-white rounded-lg flex justify-center items-center gap-4;
+    }
+
+    .button__hover{
+        @apply shadow-xl shadow-cyan-500/20 text-white rounded-3xl;
+    }
+}

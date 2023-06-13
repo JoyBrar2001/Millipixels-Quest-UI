@@ -47,6 +47,10 @@ svg{
 }
 
 @layer components{
+    .blue__gradient{
+        @apply bg-gradient-to-br from-[#34BDDF] to-[#00A4CD];
+    }
+
     .sidebar-list-item{
         @apply flex items-center justify-start gap-2 my-1 px-2 py-1 cursor-pointer;
     }
@@ -64,5 +68,13 @@ svg{
 
     .navigation-btn{
         @apply flex flex-row justify-center items-center gap-2 bg-gradient-to-br from-blue-400 to-blue-500 text-white font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-150 hover:shadow-xl hover:shadow-blue-400/40;
+    }
+
+    .flex-center{
+        @apply flex justify-center items-center;
+    }
+
+    .transition-150{
+        @apply transition-all duration-150 ease-in-out;
     }
 }
