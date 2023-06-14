@@ -4,7 +4,7 @@
 
 @layer components{
     .stats__button{
-        @apply bg-white flex justify-start items-center gap-2 pl-3 py-1.5 w-full rounded-lg shadow-sm font-semibold;
+        @apply bg-white flex justify-start items-center gap-2 py-3 px-4 w-full rounded-lg shadow-sm font-semibold;
     }
     
     .stats__button__hover{
