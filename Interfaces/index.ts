@@ -1,3 +1,7 @@
+export interface TitleProps {
+  mainTitle: string,
+}
+
 export interface TextCardProps {
   data: TextCard[],
 }
@@ -7,9 +11,9 @@ export interface TextCard {
 }
 
 export interface PieChartProps{
-  data: PieChart[],
+  data: PieChartItem[],
 }
-export interface PieChart {
+export interface PieChartItem {
   title: string,
   amount: number,
   color: string,

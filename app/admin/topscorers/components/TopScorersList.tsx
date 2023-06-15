@@ -1,5 +1,6 @@
-import { TopScorersProps } from "@/Interfaces"
+import '@/app/admin/admin.css'
 
+import { TopScorersProps } from "@/Interfaces"
 
 const TopScorersList = ({ data }: TopScorersProps) => {
   return (

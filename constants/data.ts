@@ -29,6 +29,11 @@ export const PieChartData = [
     amount: 20,
     color: "#EF4444"
   },
+  {
+    title: "New",
+    amount: 10,
+    color: "#1f1f1f"
+  },
 ];
 
 export const TopScorersData = [

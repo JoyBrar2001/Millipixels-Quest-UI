@@ -1,4 +1,4 @@
-import './admin.css'
+import '@/app/admin/admin.css'
 
 import { AdminSidebar, Card1, Card2, Card3, Card4 } from './components'
 import { PieChartData, TextCardData, TopScorersData } from '@/constants/data'
