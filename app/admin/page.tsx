@@ -1,7 +1,7 @@
 import '@/app/admin/admin.css'
 
 import { AdminSidebar, Card1, Card2, Card3, Card4 } from './components'
-import { PieChartData, TextCardData, TopScorersData } from '@/constants/data'
+import { BarChartData, PieChartData, TextCardData, TopScorersData } from '@/constants/data'
 
 export default function Page() {
   return (
@@ -13,7 +13,7 @@ export default function Page() {
         <h1 className='col-span-3 text-5xl font-bold'>Admin Dasboard</h1>
         <Card1 data={TextCardData} />
         <Card2 data={PieChartData}/>
-        <Card3 />
+        {/* <Card3 data={BarChartData} /> */}
         <Card4 data={TopScorersData}/>
       </div>
     </div>

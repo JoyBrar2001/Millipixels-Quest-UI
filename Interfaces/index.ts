@@ -30,6 +30,15 @@ export interface TopScorers {
   percentage: number,
 }
 
+export interface BarChartProps{
+  labels: string[],
+  datasets: BarCharDatasets[],
+}
+export interface BarCharDatasets{
+  label: string,
+  data: number[],
+}
+
 export interface QuizDetailsProps{
   data: QuizDetails[],
 }

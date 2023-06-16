@@ -36,6 +36,14 @@ export const PieChartData = [
   },
 ];
 
+export const BarChartData = {
+  labels: ["Cloud", "UI/UX", "AI/ML", "Software"],
+  datasets: [{
+    label: "No. of Candidates",
+    data: [20, 24, 18, 19]
+  }],
+}
+
 export const TopScorersData = [
   {
     position: 1,
@@ -89,13 +97,9 @@ export const TopScorersData = [
 ];
 
 
-export interface QuizDetails{
-  title: string,
-  questions: number,
-  time: number,
-  difficulty: string,
-  topics: [],
-}
+
+
+
 
 export const QuizDetailsData = [
   {

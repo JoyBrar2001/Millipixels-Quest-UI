@@ -13,7 +13,6 @@ export default function Card2({ data }: PieChartProps) {
       let obj = { title: item.title, value: item.amount, color: item.color };
       arr.push(obj);
     });
-    console.log(arr);
     return arr;
   }
 
