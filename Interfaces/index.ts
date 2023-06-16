@@ -29,3 +29,14 @@ export interface TopScorers {
   quiz: string,
   percentage: number,
 }
+
+export interface QuizDetailsProps{
+  data: QuizDetails[],
+}
+export interface QuizDetails{
+  title: string,
+  questions: number,
+  time: number,
+  difficulty: string,
+  topics: string[],
+}

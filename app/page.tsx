@@ -10,6 +10,7 @@ export default function Page() {
         <Link href="/signup">Sign Up Page</Link><br />
         <Link href="/login">Login Page</Link><br />
         <Link href="/admin">Admin Dashboard</Link><br />
+        <Link href="/candidate">Candidate Dashboard</Link><br />
         <Link href="/question">Quesetion UI</Link><br />
         <Link href="/dashboard">Dashboard</Link>
       </p>

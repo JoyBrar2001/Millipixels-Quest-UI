@@ -87,3 +87,29 @@ export const TopScorersData = [
     percentage: 70,
   },
 ];
+
+
+export interface QuizDetails{
+  title: string,
+  questions: number,
+  time: number,
+  difficulty: string,
+  topics: [],
+}
+
+export const QuizDetailsData = [
+  {
+    title: "Javascript Quiz",
+    questions: 30,
+    time: 45,
+    difficulty: "Intermediate",
+    topics: ["DOM Manipulation", "Promise APIs", "Await Async Functions", "Components", "Etc."],
+  },
+  {
+    title: "Python Quiz",
+    questions: 45,
+    time: 60,
+    difficulty: "Easy",
+    topics: ["Topic 1", "Topic 2", "Topic 3"],
+  },
+];

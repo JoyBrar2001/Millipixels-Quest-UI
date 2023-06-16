@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .candidate-button{
+        @apply text-white flex justify-center items-center text-xl px-4 py-2 rounded-full ml-auto shadow-lg hover:shadow-cyan-500/50 transition-all duration-300;
+    }
+
+    .quiz-details-title{
+        @apply text-center text-4xl font-semibold border-b-[2px] border-b-[#606060] pb-4;
+    }
+
+    .quiz-details-text{
+        @apply flex items-center justify-start gap-3 font-medium;
+    }
+}
