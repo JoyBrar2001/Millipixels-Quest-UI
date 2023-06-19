@@ -40,7 +40,7 @@ export const BarChartData = {
   labels: ["Cloud", "UI/UX", "AI/ML", "Software"],
   datasets: [{
     label: "No. of Candidates",
-    data: [20, 24, 18, 19]
+    dataValues: [20, 24, 18, 19]
   }],
 }
 

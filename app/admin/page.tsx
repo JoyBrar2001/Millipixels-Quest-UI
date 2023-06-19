@@ -9,11 +9,11 @@ export default function Page() {
       <div className="flex-center flex-col gap-2 flex-[1] w-full px-10 border-r-[1px] border-black">
         <AdminSidebar />
       </div>
-      <div className="flex-[3] lg:flex-[4] grid grid-cols-3 justify-center items-center gap-8 py-4 px-8">
-        <h1 className='col-span-3 text-5xl font-bold'>Admin Dasboard</h1>
+      <div className="flex-[3] lg:flex-[4] grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-8 py-4 px-8">
+        <h1 className='md:col-span-2 lg:col-span-3 text-5xl font-bold'>Admin Dasboard</h1>
         <Card1 data={TextCardData} />
         <Card2 data={PieChartData}/>
-        {/* <Card3 data={BarChartData} /> */}
+        <Card3 data={BarChartData}/>
         <Card4 data={TopScorersData}/>
       </div>
     </div>

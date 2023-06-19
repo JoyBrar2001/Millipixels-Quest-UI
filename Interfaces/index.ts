@@ -32,12 +32,15 @@ export interface TopScorers {
 
 export interface BarChartProps{
   labels: string[],
-  datasets: BarCharDatasets[],
+  datasets: {
+    label: string,
+    dataValues: number[],
+  },
 }
-export interface BarCharDatasets{
-  label: string,
-  data: number[],
-}
+// export interface BarCharDatasets{
+//   label: string,
+//   data: number[],
+// }
 
 export interface QuizDetailsProps{
   data: QuizDetails[],

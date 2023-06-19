@@ -17,7 +17,7 @@ export default function Card2({ data }: PieChartProps) {
   }
 
   return (
-    <div className='flex-center gap-4 bg-white rounded-xl h-full w-full shadow-lg'>
+    <div className='flex-center max-lg:flex-col gap-4 bg-white rounded-xl h-full w-full shadow-lg'>
       <PieChart
         className='relative w-[40%]'
         data={CreateArrayForPie({data})}

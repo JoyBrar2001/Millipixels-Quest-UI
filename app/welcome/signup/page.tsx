@@ -6,7 +6,7 @@ export default function Page() {
     <div className="text-center flex-col md:flex-row max-md:flex-col-reverse text-[#1f1f1f] bg-gray-200 h-full md:min-h-[90vh] flex-center rounded-3xl shadow-lg">
       <div className="h-full w-full text-xl font-medium flex-center gap-4 md:h-[90vh] py-8 max-md:rounded-b-3xl md:rounded-l-3xl p-4 flex-col flex-[1] text-white blue__gradient">
         <p className='lg:text-4xl'>Already have an account ?<br />Sign in here</p>
-        <Link href="/login">
+        <Link href="/welcome/login">
           <button className="bg-white rounded-full text-cyan-500 text-lg px-8 py-2">
             Sign In
           </button>

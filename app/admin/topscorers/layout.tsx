@@ -1,4 +1,4 @@
-export default function AdminLayout({ children }: { children: React.ReactNode }) {
+export default function TopScorersLayout({ children }: { children: React.ReactNode }) {
   return (
     <>{children}</>
   )

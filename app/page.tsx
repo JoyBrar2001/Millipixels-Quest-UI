@@ -7,8 +7,8 @@ export default function Page() {
         
       <p className="text-lg">
         <Link href="/welcome">Welcome Page</Link><br />
-        <Link href="/signup">Sign Up Page</Link><br />
-        <Link href="/login">Login Page</Link><br />
+        <Link href="/welcome/signup">Sign Up Page</Link><br />
+        <Link href="/welcome/login">Login Page</Link><br />
         <Link href="/admin">Admin Dashboard</Link><br />
         <Link href="/candidate">Candidate Dashboard</Link><br />
         <Link href="/question">Quesetion UI</Link><br />

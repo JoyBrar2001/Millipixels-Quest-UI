@@ -17,7 +17,7 @@ export default function Page(){
           </div>
         </Link>
 
-        <Link href="/login" className="inline">
+        <Link href="/welcome/login" className="inline">
           <div className="button__styles hover:blue__gradient hover:button__hover transition-150">
             <RiShieldUserLine className="relative" size={48} />
             <h2 className="text-2xl font-semibold">Admin</h2>

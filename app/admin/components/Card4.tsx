@@ -8,7 +8,7 @@ export default function Card4({ data }: TopScorersProps) {
   const cutOutData = data.slice(0,4)
 
   return (
-    <div className="bg-white col-span-2 h-full p-10 rounded-lg shadow-xl">
+    <div className="bg-white lg:col-span-2 h-full p-10 rounded-lg shadow-xl">
       <div className='relative w-full border-b-[1px] border-b-[#1f1f1f99]'>
         <h1 className="text-lg font-bold">Top Scorers</h1>
         <Link href="/admin/topscorers">
