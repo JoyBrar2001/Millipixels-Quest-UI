@@ -5,7 +5,7 @@ import '@/app/admin/admin.css'
 import { PieChartProps, PieChartItem } from '@/Interfaces';
 import { PieChart } from 'react-minimal-pie-chart';
 
-export default function Card2({ data }: PieChartProps) {
+export default function PieChartCard({ data }: PieChartProps) {
 
   const CreateArrayForPie = ({ data } : PieChartProps) => {
     let arr:any[] = [];
@@ -17,11 +17,13 @@ export default function Card2({ data }: PieChartProps) {
   }
 
   return (
-    <div className='flex-center max-lg:flex-col gap-4 bg-white rounded-xl h-full w-full shadow-lg'>
-      <PieChart
-        className='relative w-[40%]'
-        data={CreateArrayForPie({data})}
-      />
+    <div className='flex-center justify-start max-lg:flex-col gap-4 bg-white rounded-xl h-full w-full shadow-lg'>
+      <div className='flex-center w-full'>
+        <PieChart
+          className='relative w-[75%]'
+          data={CreateArrayForPie({data})}
+          />
+      </div>
       <section className='flex-center flex-col text-left gap-3 text-sm'>
         {data.map((item, index) => (
           <div key={index} className='flex justify-start items-center w-full gap-1'>

@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { TopScorersProps } from '@/Interfaces';
 import { BsArrowUpRight } from 'react-icons/bs';
 
-export default function Card4({ data }: TopScorersProps) {
-  const cutOutData = data.slice(0,4)
+export default function Card4({ data }: TopScorersProps,) {
+  const cutOutData = data.slice(0, 4)
 
   return (
     <div className="bg-white lg:col-span-2 h-full p-10 rounded-lg shadow-xl">
@@ -18,11 +18,11 @@ export default function Card4({ data }: TopScorersProps) {
       <div className='flex flex-col gap-4 mt-6'>
         {cutOutData.map(item => (
           <div className="grid grid-cols-6">
-          <p>{item.position}.</p>
-          <p className="col-span-2">{item.name}</p>
-          <p className="col-span-2">{item.quiz}</p>
-          <p>{item.percentage}%</p>
-        </div>
+            <p>{item.position}.</p>
+            <p className="col-span-2">{item.name}</p>
+            <p className="col-span-2">{item.quiz}</p>
+            <p>{item.percentage}%</p>
+          </div>
         ))}
       </div>
     </div>

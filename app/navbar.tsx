@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Navbar = () => {
   return (
-    <div className='fixed flex gap-4 justify-between items-center w-full bg-white text-gray-700 h-14 px-4 lg:px-8 shadow-xl'>
+    <div className='fixed flex z-50 gap-4 justify-between items-center w-full bg-white text-gray-700 h-14 px-4 lg:px-8 shadow-xl'>
       <Link href="/">
         <div className="flex-center gap-2">
           <RiComputerLine size={25} className="relative" />

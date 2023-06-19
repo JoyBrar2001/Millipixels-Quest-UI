@@ -8,10 +8,8 @@ import { Chart, registerables } from 'chart.js';
 import { BarChartProps } from '@/Interfaces';
 import Link from 'next/link';
 
-export default function Card3( data:any ) {
+export default function Card3( { labels, datasets }: BarChartProps ) {
   Chart.register(...registerables);
-
-  console.log(data);
 
   return (
     <div className='flex-center justify-start flex-col gap-4 bg-white p-10 rounded-xl h-full w-full shadow-lg'>
@@ -22,9 +20,11 @@ export default function Card3( data:any ) {
         </Link>
       </div>
       <div className="flex-center">
+
+        {/* Bar Chart */}
         <Bar
           data={{
-            labels: ["Cloud", "UI/UX", "AI/ML", "Software"],
+            labels: labels,
             datasets: [{
               backgroundColor: 'rgb(50,188,222)',
               borderRadius: 5,
@@ -32,11 +32,15 @@ export default function Card3( data:any ) {
               barThickness: 30,
               maxBarThickness: 50,
               minBarLength: 10,
-              label: "No. of Candidates",
-              data: [20, 24, 18, 19]
+
+
+              label: datasets.label,
+              data: datasets.dataValues,
             }],
           }}
         />
+
+
       </div>
     </div>
   )

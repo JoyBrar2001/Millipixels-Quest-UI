@@ -1,6 +1,6 @@
 import '@/app/admin/admin.css'
 
-import { AdminSidebar, Card1, Card2, Card3, Card4 } from './components'
+import { AdminSidebar, TitleTextCard, PieChartCard, Card3, Card4 } from './components'
 import { BarChartData, PieChartData, TextCardData, TopScorersData } from '@/constants/data'
 
 export default function Page() {
@@ -11,9 +11,9 @@ export default function Page() {
       </div>
       <div className="flex-[3] lg:flex-[4] grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-8 py-4 px-8">
         <h1 className='md:col-span-2 lg:col-span-3 text-5xl font-bold'>Admin Dasboard</h1>
-        <Card1 data={TextCardData} />
-        <Card2 data={PieChartData}/>
-        <Card3 data={BarChartData}/>
+        <TitleTextCard data={TextCardData} />
+        <PieChartCard data={PieChartData}/>
+        <Card3 labels={BarChartData.labels} datasets={BarChartData.datasets}/>
         <Card4 data={TopScorersData}/>
       </div>
     </div>

@@ -37,11 +37,11 @@ export const PieChartData = [
 ];
 
 export const BarChartData = {
-  labels: ["Cloud", "UI/UX", "AI/ML", "Software"],
-  datasets: [{
+  labels: ["Cloud", "UI/UX", "AI/ML", "Software", "Managar"],
+  datasets: {
     label: "No. of Candidates",
-    dataValues: [20, 24, 18, 19]
-  }],
+    dataValues: [20, 24, 18, 19, 20]
+  },
 }
 
 export const TopScorersData = [
@@ -95,11 +95,6 @@ export const TopScorersData = [
     percentage: 70,
   },
 ];
-
-
-
-
-
 
 export const QuizDetailsData = [
   {

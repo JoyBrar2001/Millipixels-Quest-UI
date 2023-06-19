@@ -10,7 +10,7 @@ export default function Page(){
       <p className="text-xl font-medium mt-12 mb-6">Which user are you ?</p>
 
       <div className="w-full flex flex-col md:flex-row gap-4 justify-center items-center">
-        <Link href="/login" className="inline">
+        <Link href="/welcome/login" className="inline">
           <div className="button__styles hover:blue__gradient hover:button__hover transition-150">
             <FaRegUserCircle className="relative" size={45} />
             <h2 className="text-2xl font-semibold">Candidate</h2>
