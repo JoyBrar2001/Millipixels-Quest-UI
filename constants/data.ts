@@ -112,3 +112,24 @@ export const QuizDetailsData = [
     topics: ["Topic 1", "Topic 2", "Topic 3"],
   },
 ];
+
+export const MarksPieChartData = [
+  {
+    value: 24,
+    total: 30,
+    title: "Correct",
+    color: "#4ADE80",
+  },
+  {
+    value: 2,
+    total: 30,
+    title: "Incorrect",
+    color: "#EF4444",
+  },
+  {
+    value: 4,
+    total: 30,
+    title: "Unattempted",
+    color: "#F59E0B",
+  },
+];

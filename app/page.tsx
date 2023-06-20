@@ -12,7 +12,7 @@ export default function Page() {
         <Link href="/admin">Admin Dashboard</Link><br />
         <Link href="/candidate">Candidate Dashboard</Link><br />
         <Link href="/question">Quesetion UI</Link><br />
-        <Link href="/dashboard">Dashboard</Link>
+        <Link href="/candidate/dashboard">Marks Dashboard</Link>
       </p>
     </div>
   )

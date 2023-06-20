@@ -52,3 +52,14 @@ export interface QuizDetails{
   difficulty: string,
   topics: string[],
 }
+
+export interface MarksPieChartProps{
+  data: MarksPieChart[],
+}
+
+export interface MarksPieChart{
+  value: number,
+  total: number,
+  title: string,
+  color: string,
+}
