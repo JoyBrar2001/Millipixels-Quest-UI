@@ -63,3 +63,30 @@ export interface MarksPieChart{
   title: string,
   color: string,
 }
+
+export interface QuizSidebarQuestionsProps{
+  data: QuizSidebarQuestions[],
+}
+export interface QuizSidebarQuestions{
+  questionNumber: number,
+  status: string,
+}
+
+export interface McqQuestionProps{
+  questionNumber: number,
+  question: string,
+  options: string[],
+}
+
+export interface QuizLiveStatsQuestionData{
+  title: string,
+  value: number,
+  total: number,
+}
+export interface QuizLiveStatsProps{
+  time: {
+    minutes: number,
+    seconds: number,
+  },
+  questionData: QuizLiveStatsQuestionData[],
+}

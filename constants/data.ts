@@ -37,7 +37,7 @@ export const PieChartData = [
 ];
 
 export const BarChartData = {
-  labels: ["Cloud", "UI/UX", "AI/ML", "Software", "Managar"],
+  labels: ["Cloud", "UI/UX", "AI/ML", "Software", "Manager"],
   datasets: {
     label: "No. of Candidates",
     dataValues: [20, 24, 18, 19, 20]
@@ -133,3 +133,88 @@ export const MarksPieChartData = [
     color: "#F59E0B",
   },
 ];
+
+export const QuizSidebarData = [
+  {
+    questionNumber: 1,
+    status: "Answered",
+  },
+  {
+    questionNumber: 2,
+    status: "Answered",
+  },
+  {
+    questionNumber: 3,
+    status: "Answered",
+  },
+  {
+    questionNumber: 4,
+    status: "Answered",
+  },
+  {
+    questionNumber: 5,
+    status: "Answered",
+  },
+  {
+    questionNumber: 6,
+    status: "Visited",
+  },
+  {
+    questionNumber: 7,
+    status: "Marked",
+  },
+  {
+    questionNumber: 8,
+    status: "Marked",
+  },
+  {
+    questionNumber: 9,
+    status: "Visited",
+  },
+  {
+    questionNumber: 10,
+    status: "Unvisited",
+  },
+  {
+    questionNumber: 11,
+    status: "Unvisited",
+  },
+  {
+    questionNumber: 12,
+    status: "Unvisited",
+  },
+  {
+    questionNumber: 13,
+    status: "Unvisited",
+  },
+];
+
+export const McqQuestionData = {
+  questionNumber: 12,
+  question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
+  options: ["Script", "Js", "Style", "Form"]
+}
+
+export const QuizLiveStats = {
+  time: {
+    minutes: 12,
+    seconds: 42,
+  },
+  questionData: [
+    {
+      title: "Answered",
+      value: 11,
+      total: 30,
+    },
+    {
+      title: "Visited",
+      value: 15,
+      total: 30,
+    },
+    {
+      title: "Review",
+      value: 3,
+      total: 30,
+    }
+  ]
+}

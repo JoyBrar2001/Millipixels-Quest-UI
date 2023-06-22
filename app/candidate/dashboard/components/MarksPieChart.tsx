@@ -7,7 +7,7 @@ const MarksPieChart = ({ data }: MarksPieChartProps) => {
   return (
     <div className="w-[80%] mx-auto grid grid-cols-3 gap-12 lg:px-10">
       {data.map((item, index) => (
-        <div className="flex-center flex-col gap-4 p-10">
+        <div key={index} className="flex-center flex-col gap-4 p-10">
           <div className="relative">
             <PieChart
               className="relative"

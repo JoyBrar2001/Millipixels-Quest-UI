@@ -7,8 +7,6 @@ const OverallPieChart = ({ data }: MarksPieChartProps) => {
 
   const calculateOverallScore = () => {
     const OverallPercentage = ((data[0].value - data[1].value) / data[0].total) * 100;
-    const DisplayPercentage = OverallPercentage.toFixed(2);
-    console.log(DisplayPercentage)
     return OverallPercentage;
   }
 

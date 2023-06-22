@@ -11,7 +11,7 @@ export default function Page() {
         <Link href="/welcome/login">Login Page</Link><br />
         <Link href="/admin">Admin Dashboard</Link><br />
         <Link href="/candidate">Candidate Dashboard</Link><br />
-        <Link href="/question">Quesetion UI</Link><br />
+        <Link href="/candidate/question">Quesetion UI</Link><br />
         <Link href="/candidate/dashboard">Marks Dashboard</Link>
       </p>
     </div>
