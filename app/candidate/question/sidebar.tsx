@@ -53,6 +53,7 @@ const Sidebar = ({ data }: QuizSidebarQuestionsProps) => {
         <div className='border-b-[1px] border-b-[#1f1f1f55]'>
           {questionFilters.map((item, index) => (
             <button 
+              key={index}
               className={`sidebar-list-item hover:active ${activeFilter === index ? 'active' : ''}`} 
               onClick={() => {
                 setFilter(item === "All Questions" ? "" : item)
@@ -74,8 +75,14 @@ const Sidebar = ({ data }: QuizSidebarQuestionsProps) => {
               return filter === "" ? item :
                 item.status === filter ? item : ""
             })
-            .map((item) => (
-              <div style={{ backgroundColor: GenerateColor(item.status) }} className={`${item.status === "Unvisited" ? "text-black" : "text-white"} rounded-full p-2 h-8 w-8 flex-center cursor-pointer shadow-md`}>{item.questionNumber}</div>
+            .map((item, index) => (
+              <div 
+                key={index}
+                style={{ backgroundColor: GenerateColor(item.status) }} 
+                className={`${item.status === "Unvisited" ? "text-black" : "text-white"} rounded-full p-2 h-8 w-8 flex-center cursor-pointer shadow-md`}
+              >
+                {item.questionNumber}
+              </div>
             ))}
         </section>
 
