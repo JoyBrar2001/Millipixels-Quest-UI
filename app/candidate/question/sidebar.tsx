@@ -9,8 +9,10 @@ const Sidebar = ({ data }: QuizSidebarQuestionsProps) => {
 
   const [sidebar, setSidebar] = useState(false);
 
+  const [filter, setFilter] = useState("");
+
   const GenerateColor = (status: string) => {
-    const color = status === "Answered" ?  "#4ade80" : status === "Visited" ? "#f59e0b" : status === "Marked" ? "#ef4444" : "#fff"
+    const color = status === "Answered" ? "#4ade80" : status === "Visited" ? "#f59e0b" : status === "Marked" ? "#ef4444" : "#fff"
     return color;
   }
 
@@ -30,24 +32,47 @@ const Sidebar = ({ data }: QuizSidebarQuestionsProps) => {
         </div>
 
         <ul className='mt-7 text-base'>
-          <li className='sidebar-list-item acitve'><AiOutlineQuestion /> My Questions</li>
-          <li className='sidebar-list-item'><AiOutlineCheck /> Attempted</li>
-          <li className='sidebar-list-item'><AiOutlineClose /> Unattempted</li>
+          <li className='sidebar-list-item acitve'>
+            <AiOutlineQuestion /> My Questions
+          </li>
+          <li className='sidebar-list-item'>
+            <AiOutlineCheck /> Attempted
+          </li>
+          <li className='sidebar-list-item'>
+            <AiOutlineClose /> Unattempted
+          </li>
         </ul>
       </div>
 
       {/* Desktop */}
       <div className='invisible lg:visible fixed left-0 w-48 bg-slate-200 text-gray-700 h-full p-4 rounded-tr-2xl'>
 
-        <ul className='border-b-[1px] border-b-[#1f1f1f55]'>
-          <li className='sidebar-list-item acitve'><AiOutlineQuestion className="relative" /> My Questions</li>
-          <li className='sidebar-list-item'><AiOutlineCheck className="relative" /> Attempted</li>
-          <li className='sidebar-list-item'><AiOutlineClose className="relative" /> Unattempted</li>
-        </ul>
+        <div className='border-b-[1px] border-b-[#1f1f1f55]'>
+          <button className='sidebar-list-item hover:acitve' onClick={() => setFilter("")}>
+            <AiOutlineQuestion className="relative" /> All Questions
+          </button>
+          <button className='sidebar-list-item hover:acitve' onClick={() => setFilter("Answered")}>
+            <AiOutlineCheck className="relative" />Attempted
+          </button>
+          <button className='sidebar-list-item hover:acitve' onClick={() => setFilter("Visited")}>
+            <AiOutlineClose className="relative" />Unattempted
+          </button>
+          <button className='sidebar-list-item hover:acitve' onClick={() => setFilter("Marked")}>
+            <AiOutlineClose className="relative" />Marked
+          </button>
+          <button className='sidebar-list-item hover:acitve' onClick={() => setFilter("Unvisited")}>
+            <AiOutlineClose className="relative" />Remaining
+          </button>
+        </div>
 
         <section className='flex-center flex-wrap gap-2 mt-4'>
-          {data.map((item) => (
-            <div style={{ backgroundColor: GenerateColor(item.status)}} className={`${ item.status === "Unvisited" ? "text-black" : "text-white"} rounded-full p-2 h-8 w-8 flex-center cursor-pointer shadow-md`}>{item.questionNumber}</div>
+          {data
+          .filter((item) => {
+            return filter === "" ? item :
+            item.status === filter ? item : ""
+          })
+          .map((item) => (
+            <div style={{ backgroundColor: GenerateColor(item.status) }} className={`${item.status === "Unvisited" ? "text-black" : "text-white"} rounded-full p-2 h-8 w-8 flex-center cursor-pointer shadow-md`}>{item.questionNumber}</div>
           ))}
         </section>
 
