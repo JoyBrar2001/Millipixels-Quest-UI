@@ -190,6 +190,11 @@ export const McqQuestionData = {
   options: ["Script", "Js", "Style", "Form"]
 }
 
+export const TextQuestionData = {
+  questionNumber: 12,
+  question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
+}
+
 export const QuizLiveStats = {
   time: {
     minutes: 12,

@@ -77,6 +77,10 @@ export interface McqQuestionProps{
   question: string,
   options: string[],
 }
+export interface TextQuestionProps{
+  questionNumber: number,
+  question: string,
+}
 
 export interface QuizLiveStatsQuestionData{
   title: string,

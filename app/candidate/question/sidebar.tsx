@@ -60,13 +60,14 @@ const Sidebar = ({ data }: QuizSidebarQuestionsProps) => {
                 setActiveFilter(index)
               }}
             >
+              {/* Icon */}
               {item}
             </button>
           ))}
 
-          <button className={`sidebar-list-item hover:active`} onClick={() => setFilter("")}>
+          {/* <button className={`sidebar-list-item hover:active`} onClick={() => setFilter("")}>
             <AiOutlineQuestion className="relative" /> All Questions
-          </button>
+          </button> */}
         </div>
 
         <section className='flex-center flex-wrap gap-2 mt-4'>
