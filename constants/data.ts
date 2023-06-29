@@ -222,3 +222,82 @@ export const QuizLiveStats = {
     }
   ]
 }
+
+
+
+export const QuizDatabase = {
+  title: "Javascript Quiz",
+  totalQuestions: 10,
+  questions: [
+    {
+      questionNo: 1,
+      type: "MCQ",
+      status: "Answered",
+      question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
+      options: ["Script", "Js", "Style", "Form"],
+    },
+    {
+      questionNo: 2,
+      type: "Textbox",
+      status: "Answered",
+      question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
+      options: [],
+    },
+    {
+      questionNo: 3,
+      type: "Draggable",
+      status: "Answered",
+      question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
+      options: ["Script", "Js", "Style", "Form"],
+    },
+    {
+      questionNo: 4,
+      type: "MCQ",
+      status: "Marked",
+      question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
+      options: ["Script", "Js", "Style", "Form"],
+    },
+    {
+      questionNo: 5,
+      type: "Textbox",
+      status: "Visited",
+      question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
+      options: [],
+    },
+    {
+      questionNo: 6,
+      type: "Draggable",
+      status: "Marked",
+      question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
+      options: ["Script", "Js", "Style", "Form"],
+    },
+    {
+      questionNo: 7,
+      type: "MCQ",
+      status: "Unvisited",
+      question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
+      options: ["Script", "Js", "Style", "Form"],
+    },
+    {
+      questionNo: 8,
+      type: "Textbox",
+      status: "Unvisited",
+      question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
+      options: [],
+    },
+    {
+      questionNo: 9,
+      type: "Draggable",
+      status: "Unvisited",
+      question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
+      options: ["Script", "Js", "Style", "Form"],
+    },
+    {
+      questionNo: 10,
+      type: "MCQ",
+      status: "Unvisited",
+      question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
+      options: ["Script", "Js", "Style", "Form"],
+    },
+  ],
+}

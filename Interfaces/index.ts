@@ -99,3 +99,25 @@ export interface QuizLiveStatsProps{
   },
   questionData: QuizLiveStatsQuestionData[],
 }
+
+export interface QuizDatabaseProps{
+  title: string,
+  totalQuestions: number,
+  questions: SingleQuestionProps[],
+}
+export interface SingleQuestionProps{
+  questionNo: number,
+  type: string,
+  status: string,
+  question: string,
+  options : string[],
+}
+export interface PaginationProps {
+  questionNo: number;
+  totalQuestions: number;
+}
+export interface SidebarProps{
+  totalQuestions: number,
+  questionNumber: number,
+  onQuestionSelect: (questionNo: number) => void,
+}
