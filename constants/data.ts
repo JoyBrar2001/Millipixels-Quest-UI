@@ -189,10 +189,14 @@ export const McqQuestionData = {
   question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
   options: ["Script", "Js", "Style", "Form"]
 }
-
 export const TextQuestionData = {
   questionNumber: 12,
   question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
+}
+export const DraggableQuestionData = {
+  questionNumber: 12,
+  question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
+  options: ["Stage 1", "Stage 2", "Stage 3", "Stage 4"]
 }
 
 export const QuizLiveStats = {

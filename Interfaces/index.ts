@@ -81,6 +81,11 @@ export interface TextQuestionProps{
   questionNumber: number,
   question: string,
 }
+export interface DraggableQuestionProps{
+  questionNumber: number,
+  question: string,
+  options: string[],
+}
 
 export interface QuizLiveStatsQuestionData{
   title: string,
