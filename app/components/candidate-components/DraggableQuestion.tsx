@@ -1,9 +1,8 @@
 "use client"
 
-import { DraggableQuestionProps, SingleQuestionProps } from '@/Interfaces'
+import { SingleQuestionProps } from '@/Interfaces'
 import { useState } from 'react'
 import { Reorder, useDragControls, useMotionValue, DragControls } from 'framer-motion'
-import { MdDragHandle } from 'react-icons/md'
 
 const DraggableQuestion = ({ data }: { data: SingleQuestionProps }) => {
 
@@ -25,8 +24,9 @@ const DraggableQuestion = ({ data }: { data: SingleQuestionProps }) => {
               key={index} 
               value={item} 
               id={item}
+              className='bg-white px-4 py-2 text-center w-full rounded-lg'
             >
-              <span className='bg-white px-4 py-2 text-center'>{item}</span>
+              <span className=''>{item}</span>
             </Reorder.Item>
           ))}
         </Reorder.Group>

@@ -1,4 +1,4 @@
-import { SingleQuestionProps, TextQuestionProps } from "@/Interfaces"
+import { SingleQuestionProps } from "@/Interfaces"
 
 const TextQuestion = ({ data }: { data: SingleQuestionProps }) => {
   return (

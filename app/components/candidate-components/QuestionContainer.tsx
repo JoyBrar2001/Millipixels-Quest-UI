@@ -1,14 +1,9 @@
 "use client"
 
 import React, { useState } from 'react'
-import Sidebar from '../sidebar'
-import Pagination from './Pagination'
-import LiveStats from './LiveStats'
-import McqQuestion from './McqQuestion'
+import { Sidebar, Pagination, LiveStats, McqQuestion, TextQuestion, DraggableQuestion } from '@/app/components/candidate-components'
 import { QuizLiveStats } from '@/constants/data'
 import { QuizDatabaseProps } from '@/Interfaces'
-import TextQuestion from './TextQuestion'
-import DraggableQuestion from './DraggableQuestion'
 
 const QuestionContainer = ({ data }: { data: QuizDatabaseProps }) => {
 

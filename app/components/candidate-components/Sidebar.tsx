@@ -1,9 +1,7 @@
 'use client';
 
 import React, { useState } from 'react'
-import { IoLogoBuffer } from 'react-icons/io'
-import { AiOutlineMenu, AiOutlineClose, AiOutlineCheck, AiOutlineQuestion } from 'react-icons/ai'
-import { QuizDatabaseProps, QuizSidebarQuestionsProps, SidebarProps } from '@/Interfaces';
+import { SidebarProps } from '@/Interfaces';
 
 const Sidebar = ({ questions, questionNumber, onQuestionSelect }: SidebarProps) => {
 

@@ -1,7 +1,5 @@
 import { MarksPieChartData } from '@/constants/data'
-import MarksPieChart from './components/MarksPieChart'
-import MainDashboard from './mainDashboard'
-import OverallPieChart from './components/OverallPieChart'
+import { MarksPieChart, OverallPieChart } from '@/app/components/candidate-components'
 
 export default function Page(){
     return(
@@ -9,8 +7,6 @@ export default function Page(){
             <h1 className='text-5xl font-bold my-2'>Javascript Quiz Results</h1>
             <MarksPieChart data={MarksPieChartData} />
             <OverallPieChart data={MarksPieChartData} />
-            
-            {/* <MainDashboard /> */}
         </div>
     )
 }

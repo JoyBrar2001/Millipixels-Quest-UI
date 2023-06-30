@@ -1,4 +1,4 @@
-import { McqQuestionProps, QuizDatabaseProps, SingleQuestionProps } from "@/Interfaces"
+import { QuizDatabaseProps, SingleQuestionProps } from "@/Interfaces"
 
 const McqQuestion = ({ data }: { data: SingleQuestionProps }) => {
   const index = 1

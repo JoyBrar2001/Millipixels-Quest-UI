@@ -7,8 +7,8 @@ import { ImStatsBars } from 'react-icons/im'
 const CandidateTestCards = ({ data }: QuizDetailsProps) => {
   return (
       <>
-      {data.map(item => (
-        <div className='w-full h-full bg-white text-left p-12 rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-150'>
+      {data.map((item, index) => (
+        <div key={index} className='w-full h-full bg-white text-left p-12 rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/20 transition-150'>
           <h2 className="quiz-details-title">{item.title}</h2>
 
           <div className='flex flex-col text-xl mx-2 my-8 gap-4 border-b-[2px] border-b-[#606060] pb-6'>

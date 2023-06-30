@@ -1,5 +1,5 @@
 import { QuizDatabase } from '@/constants/data'
-import QuestionContainer from './components/QuestionContainer'
+import { QuestionContainer } from '@/app/components/candidate-components'
 
 export default function Page() {
   return (

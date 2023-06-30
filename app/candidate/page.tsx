@@ -1,5 +1,5 @@
 import '@/app/candidate/candidate.css'
-import CandidateTestCards from './components/CandidateTestCards'
+import { CandidateTestCards } from '@/app/components/candidate-components'
 import { QuizDetailsData } from '@/constants/data'
 
 export default function Page() {
