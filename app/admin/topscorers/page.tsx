@@ -1,6 +1,6 @@
 import { TopScorersData } from '@/constants/data'
 import '@/app/admin/admin.css'
-import TopScorersList from './components/TopScorersList'
+import { TopScorersList } from '@/app/components/admin-components'
 
 export default function Page() {
   return (

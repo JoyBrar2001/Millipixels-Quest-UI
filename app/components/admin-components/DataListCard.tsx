@@ -1,10 +1,10 @@
-import '../admin.css';
+import '@/app/admin/admin.css';
 
 import Link from 'next/link';
 import { TopScorersProps } from '@/Interfaces';
 import { BsArrowUpRight } from 'react-icons/bs';
 
-export default function Card4({ data }: TopScorersProps,) {
+export default function DataListCard({ data }: TopScorersProps,) {
   const cutOutData = data.slice(0, 4)
 
   return (

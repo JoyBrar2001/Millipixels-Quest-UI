@@ -1,6 +1,7 @@
 import '@/app/admin/admin.css'
 
-import { AdminSidebar, TitleTextCard, PieChartCard, Card3, Card4 } from './components'
+import { AdminSidebar, TitleTextCard, PieChartCard, BarChartCard, DataListCard } from '@/app/components/admin-components'
+// import { AdminSidebar, TitleTextCard, PieChartCard, Card3, Card4 } from './components'
 import { BarChartData, PieChartData, TextCardData, TopScorersData } from '@/constants/data'
 
 export default function Page() {
@@ -13,8 +14,8 @@ export default function Page() {
         <h1 className='md:col-span-2 lg:col-span-3 text-5xl font-bold'>Admin Dasboard</h1>
         <TitleTextCard data={TextCardData} />
         <PieChartCard data={PieChartData}/>
-        <Card3 labels={BarChartData.labels} datasets={BarChartData.datasets}/>
-        <Card4 data={TopScorersData}/>
+        <BarChartCard labels={BarChartData.labels} datasets={BarChartData.datasets}/>
+        <DataListCard data={TopScorersData}/>
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 "use client"
 
-import '../admin.css';
+import '@/app/admin/admin.css';
 
 import { BsArrowUpRight } from 'react-icons/bs';
 import { Bar } from 'react-chartjs-2';
@@ -8,7 +8,7 @@ import { Chart, registerables } from 'chart.js';
 import { BarChartProps } from '@/Interfaces';
 import Link from 'next/link';
 
-export default function Card3( { labels, datasets }: BarChartProps ) {
+export default function BarChartCard( { labels, datasets }: BarChartProps ) {
   Chart.register(...registerables);
 
   return (
