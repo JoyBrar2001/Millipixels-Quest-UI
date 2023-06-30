@@ -184,20 +184,6 @@ export const QuizSidebarData = [
   },
 ];
 
-export const McqQuestionData = {
-  questionNumber: 12,
-  question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
-  options: ["Script", "Js", "Style", "Form"]
-}
-export const TextQuestionData = {
-  questionNumber: 12,
-  question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
-}
-export const DraggableQuestionData = {
-  questionNumber: 12,
-  question: "Which one of the following tags would we use to include JavaScript inside a HTML Document ?",
-  options: ["Stage 1", "Stage 2", "Stage 3", "Stage 4"]
-}
 
 export const QuizLiveStats = {
   time: {
@@ -207,18 +193,18 @@ export const QuizLiveStats = {
   questionData: [
     {
       title: "Answered",
-      value: 11,
-      total: 30,
+      value: 3,
+      total: 10,
     },
     {
       title: "Visited",
-      value: 15,
-      total: 30,
+      value: 1,
+      total: 10,
     },
     {
       title: "Review",
-      value: 3,
-      total: 30,
+      value: 2,
+      total: 10,
     }
   ]
 }

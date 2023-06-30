@@ -12,7 +12,7 @@ import DraggableQuestion from './DraggableQuestion'
 
 const QuestionContainer = ({ data }: { data: QuizDatabaseProps }) => {
 
-  const [questionNumber, setQuestionNumber] = useState(10);
+  const [questionNumber, setQuestionNumber] = useState(1);
 
   return (
     <>
@@ -21,19 +21,28 @@ const QuestionContainer = ({ data }: { data: QuizDatabaseProps }) => {
         <div className='flex flex-col md:flex-row gap-6 pb-6 border-b-[1px] border-b-[#1f1f1f55]'>
           <div className='flex-center flex-col gap-4 w-full md:w-3/4 h-full'>
 
-            {data.questions[questionNumber-1].type === "MCQ" ? (
-              <McqQuestion data={data.questions[questionNumber-1]} />
-            ): data.questions[questionNumber-1].type === "Textbox" ? (
-              <TextQuestion data={data.questions[questionNumber-1]} />
-            ): data.questions[questionNumber-1].type === "Draggable" ? (
-              <DraggableQuestion data={data.questions[questionNumber-1]} />
-            ): "Error"}
+            {data.questions[questionNumber - 1].type === "MCQ" ? (
+              <McqQuestion data={data.questions[questionNumber - 1]} />
+            ) : data.questions[questionNumber - 1].type === "Textbox" ? (
+              <TextQuestion data={data.questions[questionNumber - 1]} />
+            ) : data.questions[questionNumber - 1].type === "Draggable" ? (
+              <DraggableQuestion data={data.questions[questionNumber - 1]} />
+            ) : "Error"}
+
+            <div className='w-full flex-center gap-4'>
+              <button className='flex flex-row justify-center items-center gap-2 text-white text-sm font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-150 hover:shadow-xl hover:shadow-green-400/40 bg-green-400'>
+                Save Answer
+              </button>
+              <button className='flex flex-row justify-center items-center gap-2 text-white text-sm font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-150 hover:shadow-xl hover:shadow-red-500/40 bg-red-500'>
+                Mark for Review
+              </button>
+            </div>
 
           </div>
           <LiveStats data={QuizLiveStats} />
         </div>
 
-        <Pagination questionNo={questionNumber} totalQuestions={data.totalQuestions} />
+        <Pagination questionNo={questionNumber} totalQuestions={data.totalQuestions} onQuestionSelect={(questionNo) => setQuestionNumber(questionNo)} />
       </div>
     </>
   )

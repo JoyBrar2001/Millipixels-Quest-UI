@@ -72,21 +72,6 @@ export interface QuizSidebarQuestions{
   status: string,
 }
 
-export interface McqQuestionProps{
-  questionNumber: number,
-  question: string,
-  options: string[],
-}
-export interface TextQuestionProps{
-  questionNumber: number,
-  question: string,
-}
-export interface DraggableQuestionProps{
-  questionNumber: number,
-  question: string,
-  options: string[],
-}
-
 export interface QuizLiveStatsQuestionData{
   title: string,
   value: number,
@@ -113,11 +98,12 @@ export interface SingleQuestionProps{
   options : string[],
 }
 export interface PaginationProps {
-  questionNo: number;
-  totalQuestions: number;
+  questionNo: number,
+  totalQuestions: number,
+  onQuestionSelect: (questionNo: number) => void,
 }
 export interface SidebarProps{
-  totalQuestions: number,
+  questions: SingleQuestionProps[],
   questionNumber: number,
   onQuestionSelect: (questionNo: number) => void,
 }
