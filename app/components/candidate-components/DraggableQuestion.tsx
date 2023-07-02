@@ -6,6 +6,7 @@ import { Reorder, useDragControls, useMotionValue, DragControls } from 'framer-m
 
 const DraggableQuestion = ({ data }: { data: SingleQuestionProps }) => {
 
+
   const [options, setOptions] = useState(data.options)
   const handleReorder = ( newOptions: string[] ) => {
     setOptions(newOptions)
@@ -18,7 +19,7 @@ const DraggableQuestion = ({ data }: { data: SingleQuestionProps }) => {
         <p>{data.question}</p>
       </div>
       <ul className='flex flex-col w-fulll'>
-        <Reorder.Group layoutScroll className='flex-center flex-col gap-4' axis="y" onReorder={setOptions} values={options}>
+        <Reorder.Group className='flex-center flex-col gap-4' axis="y" onReorder={setOptions} values={options}>
           {options.map((item, index) => (
             <Reorder.Item
               key={index} 
@@ -26,7 +27,7 @@ const DraggableQuestion = ({ data }: { data: SingleQuestionProps }) => {
               id={item}
               className='bg-white px-4 py-2 text-center w-full rounded-lg'
             >
-              <span className=''>{item}</span>
+              {item}
             </Reorder.Item>
           ))}
         </Reorder.Group>

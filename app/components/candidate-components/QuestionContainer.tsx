@@ -5,12 +5,17 @@ import { Sidebar, Pagination, LiveStats, McqQuestion, TextQuestion, DraggableQue
 import { QuizLiveStats } from '@/constants/data'
 import { QuizDatabaseProps } from '@/Interfaces'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { notify } from './notify'
+
 const QuestionContainer = ({ data }: { data: QuizDatabaseProps }) => {
 
   const [questionNumber, setQuestionNumber] = useState(1);
 
   return (
     <>
+      <ToastContainer />
       <Sidebar questions={data.questions} questionNumber={questionNumber} onQuestionSelect={(questionNo) => setQuestionNumber(questionNo)} />
       <div className='lg:ml-48 mt-10 py-10 px-16 flex flex-col bg-gray-100 p-6 rounded-2xl shadow-xl'>
         <div className='flex flex-col md:flex-row gap-6 pb-6 border-b-[1px] border-b-[#1f1f1f55]'>
@@ -25,10 +30,10 @@ const QuestionContainer = ({ data }: { data: QuizDatabaseProps }) => {
             ) : "Error"}
 
             <div className='w-full flex-center gap-4'>
-              <button className='flex flex-row justify-center items-center gap-2 text-white text-sm font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-150 hover:shadow-xl hover:shadow-green-400/40 bg-green-400'>
+              <button onClick={() => notify("Answer Saved", "success")} className='flex flex-row justify-center items-center gap-2 text-white text-sm font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-150 hover:shadow-xl hover:shadow-green-400/40 bg-green-400'>
                 Save Answer
               </button>
-              <button className='flex flex-row justify-center items-center gap-2 text-white text-sm font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-150 hover:shadow-xl hover:shadow-red-500/40 bg-red-500'>
+              <button onClick={() => notify("Marked for Review", "error")} className='flex flex-row justify-center items-center gap-2 text-white text-sm font-semibold py-2 px-4 rounded-md shadow-md transition-all duration-150 hover:shadow-xl hover:shadow-red-500/40 bg-red-500'>
                 Mark for Review
               </button>
             </div>

@@ -210,7 +210,6 @@ export const QuizLiveStats = {
 }
 
 
-
 export const QuizDatabase = {
   title: "Javascript Quiz",
   totalQuestions: 10,

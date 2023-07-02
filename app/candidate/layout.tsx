@@ -1,4 +1,4 @@
-import Navbar from "../navbar"
+import Navbar from "@/app/components/navbar"
 
 export default function CandidateLayout({children} : {children : React.ReactNode }){
     return(
