@@ -8,10 +8,10 @@
     }
 
     .quiz-details-title{
-        @apply text-center text-4xl font-semibold border-b-[2px] border-b-[#606060] pb-4;
+        @apply text-center text-2xl md:text-3xl lg:text-4xl font-semibold border-b-[2px] border-b-[#606060] pb-4;
     }
 
     .quiz-details-text{
-        @apply flex items-center justify-start gap-3 font-medium;
+        @apply flex max-sm:text-sm items-center justify-start gap-3 font-medium;
     }
 }

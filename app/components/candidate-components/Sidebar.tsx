@@ -2,8 +2,12 @@
 
 import React, { useState } from 'react'
 import { SidebarProps } from '@/Interfaces';
+import { AiOutlineClose } from 'react-icons/ai';
+import { BiMenuAltLeft } from 'react-icons/bi';
 
 const Sidebar = ({ questions, questionNumber, onQuestionSelect }: SidebarProps) => {
+
+  const [open, setOpen] = useState(true)
 
   const questionFilters = ["All Questions", "Answered", "Visited", "Marked", "Unvisited"];
 
@@ -16,13 +20,16 @@ const Sidebar = ({ questions, questionNumber, onQuestionSelect }: SidebarProps) 
   }
 
   return (
-      <div className='-mt-10 fixed left-0 w-48 bg-slate-200 text-gray-700 h-full p-4 rounded-tr-2xl'>
+    <>
+      <div className='w-8 h-8 flex-center bg-black/10 rounded-full absolute top-16 left-2 z-50 cursor-pointer lg:hidden' onClick={() => setOpen(!open)}>{open ? <AiOutlineClose size={30}/> : <BiMenuAltLeft size={30}/>}</div>
+      <div className={`-mt-10 fixed left-0 w-48 bg-slate-200 text-gray-700 h-full p-4 rounded-tr-2xl ${open ? 'block' : 'hidden'}`}>
+
 
         <div className='border-b-[1px] border-b-[#1f1f1f55]'>
           {questionFilters.map((item, index) => (
-            <button 
+            <button
               key={index}
-              className={`sidebar-list-item hover:active ${activeFilter === index ? 'active' : ''}`} 
+              className={`sidebar-list-item hover:active ${activeFilter === index ? 'active' : ''}`}
               onClick={() => {
                 setFilter(item === "All Questions" ? "" : item)
                 setActiveFilter(index)
@@ -44,9 +51,9 @@ const Sidebar = ({ questions, questionNumber, onQuestionSelect }: SidebarProps) 
                 item.status === filter ? item : ""
             })
             .map((item, index) => (
-              <div 
+              <div
                 key={index}
-                style={{ backgroundColor: GenerateColor(item.status) }} 
+                style={{ backgroundColor: GenerateColor(item.status) }}
                 className={`${item.status === "Unvisited" ? "text-black" : "text-white"} rounded-full p-2 h-8 w-8 flex-center cursor-pointer shadow-md`}
                 onClick={() => onQuestionSelect(item.questionNo)}
               >
@@ -56,7 +63,7 @@ const Sidebar = ({ questions, questionNumber, onQuestionSelect }: SidebarProps) 
         </section>
 
       </div>
-
+    </>
   )
 }
 

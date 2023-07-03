@@ -21,7 +21,7 @@ const CandidateTestCards = ({ data }: QuizDetailsProps) => {
             <h3 className="text-2xl font-semibold">Topics</h3>
             <ul className='list-disc pl-6'>
               {item.topics.map(item => (
-                <li>{item}</li>
+                <li className='max-md:text-sm'>{item}</li>
               ))}
             </ul>
           </div>
