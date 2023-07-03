@@ -1,8 +1,6 @@
 import { ToastContainer, toast } from 'react-toastify';
 
-export const notify = (title: string, type: string) => {
-    console.log("toast")
-    
+export const notify = (title: string, type: string) => {   
     type === "success" ? toast.success(title, {
       position: "top-right",
       autoClose: 5000,
