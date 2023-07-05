@@ -15,7 +15,7 @@ const Pagination = ({ questionNo, totalQuestions, onQuestionSelect }: Pagination
           <BsChevronLeft size={15} className='relative' /> Prev
         </button>
         <button 
-          className='pagination-button transition-150'
+          className='pagination-button transition-150 max-md:hidden'
           onClick={() => onQuestionSelect(1)}
         >
           <BsChevronDoubleLeft size={15} className='relative' />
@@ -23,7 +23,7 @@ const Pagination = ({ questionNo, totalQuestions, onQuestionSelect }: Pagination
 
         {questionNo >= 3 ? (
           <button 
-            className='pagination-button transition-150'
+            className='pagination-button transition-150 max-md:hidden'
             onClick={() => onQuestionSelect(questionNo-2)}
           >
             {questionNo - 2}
@@ -50,7 +50,7 @@ const Pagination = ({ questionNo, totalQuestions, onQuestionSelect }: Pagination
         ) : ''}
         {questionNo <= totalQuestions - 2 ? (
           <button 
-            className='pagination-button transition-150'
+            className='pagination-button transition-150 max-md:hidden'
             onClick={() => onQuestionSelect(questionNo+2)}
           >
             {questionNo + 2}
@@ -58,7 +58,7 @@ const Pagination = ({ questionNo, totalQuestions, onQuestionSelect }: Pagination
         ) : ''}
 
         <button 
-          className='pagination-button transition-150'
+          className='pagination-button transition-150 max-md:hidden'
           onClick={() => onQuestionSelect(totalQuestions)}
         >
           <BsChevronDoubleRight size={15} className='relative' />

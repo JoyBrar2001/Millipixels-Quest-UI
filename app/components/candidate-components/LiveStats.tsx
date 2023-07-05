@@ -10,12 +10,12 @@ const LiveStats = ({ data }: { data: QuizLiveStatsProps }) => {
         <FaClock size={40} className='drop-shadow-xl relative' />
         <h1 className='text-2xl font-bold'>{data.time.minutes}:{data.time.seconds} left</h1>
       </div>
-      <ul className='flex flex-row md:flex-col text-sm md:text-base gap-2 mt-4 pl-2'>
+      <ul className='flex-center flex-row md:flex-col text-sm md:text-base gap-2 mt-4 pl-2'>
         {data.questionData.map((item, index) => (
-          <li key={index} className='question-side-li'>
+          <li key={index} className='flex-center flex-col md:flex-row text-center gap-2'>
             {item.title === "Answered" ? <AiFillCheckCircle className='text-green-400 green__glow relative' size={25} /> : 
             item.title === "Visited" ? <AiFillEye className='text-amber-500 yellow__glow relative' size={25} /> : 
-            <BsPenFill className='text-red-500 red__glow relative' size={22} />} {item.value}/{item.total} {item.title}
+            <BsPenFill className='text-red-500 red__glow relative' size={22} />} {item.value}/{item.total} <br className='md:hidden' /> {item.title}
           </li>
         ))}
         {/* <li className='question-side-li'>

@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { SidebarProps } from '@/Interfaces';
 import { AiOutlineClose } from 'react-icons/ai';
 import { BiMenuAltLeft } from 'react-icons/bi';
+import { RiComputerLine } from 'react-icons/ri';
 
 const Sidebar = ({ questions, questionNumber, onQuestionSelect }: SidebarProps) => {
 
@@ -21,11 +22,16 @@ const Sidebar = ({ questions, questionNumber, onQuestionSelect }: SidebarProps) 
 
   return (
     <>
-      <div className='w-8 h-8 flex-center bg-black/10 rounded-full absolute top-16 left-2 z-50 cursor-pointer lg:hidden' onClick={() => setOpen(!open)}>{open ? <AiOutlineClose size={30}/> : <BiMenuAltLeft size={30}/>}</div>
-      <div className={`-mt-10 fixed left-0 w-48 bg-slate-200 text-gray-700 h-full p-4 rounded-tr-2xl ${open ? 'block' : 'hidden'}`}>
+      <div className='w-8 h-8 flex-center rounded-full fixed top-3 left-3 z-50 cursor-pointer lg:hidden' onClick={() => setOpen(!open)}>
+        {open ? <AiOutlineClose size={30} /> : <BiMenuAltLeft size={30} />}
+      </div>
+      <div className={`z-[100] -mt-10 fixed left-0 w-48 bg-slate-200 text-gray-700 h-full p-4 rounded-tr-2xl ${open ? 'block' : 'hidden'}`}>
+        <div className="flex-center justify-start gap-2 md:hidden">
+          <RiComputerLine size={25} className="relative" />
+          <h1 className='text-xl font-bold'>MilliPixels</h1>
+        </div>
 
-
-        <div className='border-b-[1px] border-b-[#1f1f1f55]'>
+        <div className='mt-4 border-b-[1px] border-b-[#1f1f1f55]'>
           {questionFilters.map((item, index) => (
             <button
               key={index}
