@@ -13,8 +13,8 @@ const OverallPieChart = ({ data }: MarksPieChartProps) => {
   let OverallPercentage = calculateOverallScore()
 
   return (
-    <div className='w-full flex-center flex-col'>
-      <div className='w-[30%] relative'>
+    <div className='w-full flex-center flex-col gap-2 max-md:py-6 max-md:border-t-[1px] max-md:border-t-[#1f1f1f55] md:border-l-[1px] md:border-l-[#1f1f1f55]'>
+      <div className='w-[300px] relative'>
 
         <PieChart
           className="relative"
@@ -28,7 +28,7 @@ const OverallPieChart = ({ data }: MarksPieChartProps) => {
           <h1 className="text-5xl font-bold">{OverallPercentage.toFixed(2)}<span className='text-2xl'>%</span></h1>
         </div>
       </div>
-        <h1 className="text-2xl font-semibold">Overall Score</h1>
+      <h1 className="text-2xl font-semibold">Overall Score</h1>
     </div>
   )
 }

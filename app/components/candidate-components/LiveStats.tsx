@@ -12,7 +12,7 @@ const LiveStats = ({ data }: { data: QuizLiveStatsProps }) => {
       </div>
       <ul className='flex-center flex-row md:flex-col text-sm md:text-base gap-2 mt-4 pl-2'>
         {data.questionData.map((item, index) => (
-          <li key={index} className='flex-center flex-col md:flex-row text-center gap-2'>
+          <li key={index} className='w-full flex-center flex-col md:flex-row md:justify-start text-center gap-2'>
             {item.title === "Answered" ? <AiFillCheckCircle className='text-green-400 green__glow relative' size={25} /> : 
             item.title === "Visited" ? <AiFillEye className='text-amber-500 yellow__glow relative' size={25} /> : 
             <BsPenFill className='text-red-500 red__glow relative' size={22} />} {item.value}/{item.total} <br className='md:hidden' /> {item.title}

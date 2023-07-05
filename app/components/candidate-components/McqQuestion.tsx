@@ -5,7 +5,7 @@ const McqQuestion = ({ data }: { data: SingleQuestionProps }) => {
 
   return (
     <div className='flex flex-col'>
-      <p className="md:hidden"><span className='text-4xl font-bold'>Q{data.questionNo}</span> {data.question}</p>
+      <p className="md:hidden"><span className='text-4xl font-bold pr-1'>Q{data.questionNo}</span> {data.question}</p>
       <div className='flex flex-row justify-start items-center gap-4 mb-8 max-md:hidden'>
         <h1 className='text-5xl font-bold'>Q{data.questionNo}</h1>
         <p>{data.question}</p>

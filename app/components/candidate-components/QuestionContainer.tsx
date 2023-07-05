@@ -17,7 +17,7 @@ const QuestionContainer = ({ data }: { data: QuizDatabaseProps }) => {
     <>
       <ToastContainer />
       <Sidebar questions={data.questions} questionNumber={questionNumber} onQuestionSelect={(questionNo) => setQuestionNumber(questionNo)} />
-      <div className='lg:ml-48 mt-10 py-6 md:py-10 px-6 md:px-16 flex flex-col bg-gray-100 p-6 rounded-2xl shadow-xl'>
+      <div className='md:ml-48 mt-10 py-6 md:py-10 px-6 md:px-16 flex flex-col bg-gray-100 p-6 rounded-2xl shadow-xl'>
         <div className='flex flex-col md:flex-row gap-6 pb-6 border-b-[1px] border-b-[#1f1f1f55]'>
           <div className='flex-center flex-col gap-4 w-full md:w-3/4 h-full'>
 
