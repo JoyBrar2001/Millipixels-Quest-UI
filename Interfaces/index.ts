@@ -107,3 +107,8 @@ export interface SidebarProps{
   questionNumber: number,
   onQuestionSelect: (questionNo: number) => void,
 }
+
+export interface AdminSidebarProps{
+  activeOption: string,
+  onOptionSelect: (option: string) => void;
+}

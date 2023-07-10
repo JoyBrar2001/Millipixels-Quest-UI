@@ -17,14 +17,14 @@ export default function PieChartCard({ data }: PieChartProps) {
   }
 
   return (
-    <div className='flex-center justify-start max-lg:flex-col gap-4 bg-white rounded-xl h-full w-full shadow-lg'>
-      <div className='flex-center w-full'>
+    <div className='flex-center justify-center items-center w-full max-lg:flex-col gap-4 bg-white rounded-xl h-full w-full shadow-lg'>
+      <div className='flex-center w-full flex-[1]'>
         <PieChart
           className='relative w-[75%]'
           data={CreateArrayForPie({data})}
           />
       </div>
-      <section className='flex-center flex-col text-left gap-3 text-sm'>
+      <section className='flex-center flex-col text-left gap-3 text-sm flex-[1]'>
         {data.map((item, index) => (
           <div key={index} className='flex justify-start items-center w-full gap-1'>
             <div className={`w-6 h-6 rounded-md`} style={{backgroundColor: `${item.color}`}} />

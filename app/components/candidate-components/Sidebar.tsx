@@ -46,15 +46,17 @@ const Sidebar = ({ questions, questionNumber, onQuestionSelect }: SidebarProps) 
 
   return (
     <>
+      {/* <div className={`h-screen w-full absolute bg-black z-[99] ${isOpen ? 'opacity-20' : 'hidden'}`} /> */}
       <div className='w-8 h-8 flex-center rounded-full fixed top-3 left-3 z-50 cursor-pointer md:hidden'>
         {isOpen ? <AiOutlineClose size={30}  onClick={() => setIsOpen(false)}/> : <BiMenuAltLeft size={30}  onClick={() => setIsOpen(true)}/>}
       </div>
-      <div className={`z-[100] fixed left-0 top-14 w-48 bg-slate-200 text-gray-700 h-full p-4 rounded-tr-2xl ${isOpen || !isSmallScreen ? 'block' : 'hidden'}`}>
+      <div className={`z-[100] fixed left-0 top-14 w-48 bg-slate-200 text-gray-700 h-full p-4 rounded-tr-2xl transition-all duration-300 shadow-lg ${isOpen || !isSmallScreen ? 'translate-x-0' : '-translate-x-[100%]'}`}>
         <div className="flex-center justify-start gap-2 md:hidden">
           <RiComputerLine size={25} className="relative" />
           <h1 className='text-xl font-bold'>MilliPixels</h1>
         </div>
 
+        {/* Filter Section */}
         <div className='max-md:mt-4 border-b-[1px] border-b-[#1f1f1f55]'>
           {questionFilters.map((item, index) => (
             <button
@@ -70,6 +72,7 @@ const Sidebar = ({ questions, questionNumber, onQuestionSelect }: SidebarProps) 
           ))}
         </div>
 
+        {/* Questions Buttons */}
         <section className='flex-center flex-wrap gap-2 mt-4'>
           {questions
             .filter((item) => {
