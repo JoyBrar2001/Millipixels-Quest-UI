@@ -10,6 +10,9 @@ export interface TextCard {
   title: string,
 }
 
+export interface PieChartPageProps{
+  data: PieChartItem[],
+}
 export interface PieChartProps{
   data: PieChartItem[],
 }
@@ -19,6 +22,9 @@ export interface PieChartItem {
   color: string,
 }
 
+export interface TopScorersPageProps {
+  data: TopScorers[],
+}
 export interface TopScorersProps {
   data: TopScorers[],
 }
@@ -31,6 +37,13 @@ export interface TopScorers {
 }
 
 export interface BarChartProps{
+  labels: string[],
+  datasets: {
+    label: string,
+    dataValues: number[],
+  },
+}
+export interface BarChartPageProps{
   labels: string[],
   datasets: {
     label: string,
@@ -109,6 +122,10 @@ export interface SidebarProps{
 }
 
 export interface AdminSidebarProps{
-  activeOption: string,
-  onOptionSelect: (option: string) => void;
+  activeSection: string,
+  onSectionSelect: (option: string) => void;
+}
+
+export interface AdminDashboardInterface{
+  onSectionSelect: (option: string) => void;
 }

@@ -2,35 +2,44 @@
 
 import '@/app/admin/admin.css'
 
-import React, { useState } from 'react'
-import { AdminSidebar, TitleTextCard, PieChartCard, BarChartCard, DataListCard, TopScorersList } from '@/app/components/admin-components'
+import React, { useState, createContext } from 'react'
+import { AdminSidebar, TitleTextCard, PieChartCard, BarChartCard, DataListCard, TopScorersList, PieChartPage } from '@/app/components/admin-components'
 // import { AdminSidebar, TitleTextCard, PieChartCard, Card3, Card4 } from './components'
 import { BarChartData, PieChartData, TextCardData, TopScorersData } from '@/constants/data'
 import AdminDashboard from '@/app/components/admin-components/AdminDashboard'
+import BarChartPage from '../components/admin-components/BarChartPage'
+
+export interface DashboardContextValues {
+  section: string;
+  handleSectionSelect: (section: string) => void;
+}
+export const DashboardContext = React.createContext<DashboardContextValues | undefined>(undefined);
 
 export default function Page() {
 
-  const [option, setOption] = useState("Dashboard");
+  const [section, setSection] = useState("Dashboard");
 
-  function handleOptionSelect(option:string){
-    setOption(option);
+  function handleSectionSelect(section: string) {
+    setSection(section);
   }
 
   return (
     <>
-      <AdminSidebar activeOption={option} onOptionSelect={handleOptionSelect}/>
-      <div className="md:ml-48 text-center flex-col items-start lg:flex-row text-[#1f1f1f] bg-gray-200 h-full md:min-h-[90vh] flex-center rounded-3xl shadow-lg">
-        {option === "Dashboard" ?
-          <AdminDashboard /> : 
-          option === "Top Scorers" ? 
-          <TopScorersList data={TopScorersData} /> :
-          option === "Distribution" ? 
-          <BarChartCard labels={BarChartData.labels} datasets={BarChartData.datasets} />:
-          option === "Score Distribution" ? 
-          <PieChartCard data={PieChartData} /> :
-          null          
-        }
-      </div>
+      <DashboardContext.Provider value={{ section, handleSectionSelect }}>
+        <AdminSidebar />
+        <div className="md:ml-48 text-center flex-col items-start lg:flex-row text-[#1f1f1f] bg-gray-200 h-full md:min-h-[90vh] flex-center rounded-3xl shadow-lg">
+            {section === "Dashboard" ?
+              <AdminDashboard /> :
+              section === "Score Distribution" ?
+                <PieChartPage data={PieChartData}/> :
+              section === "Top Scorers" ?
+                <TopScorersList data={TopScorersData} /> :
+              section === "Distribution" ?
+                <BarChartPage labels={BarChartData.labels} datasets={BarChartData.datasets} /> :
+              null
+            }
+        </div>
+      </DashboardContext.Provider>
     </>
   )
 }

@@ -1,12 +1,20 @@
 'use client';
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { AdminSidebarProps, SidebarProps } from '@/Interfaces';
 import { AiOutlineClose } from 'react-icons/ai';
 import { BiMenuAltLeft } from 'react-icons/bi';
 import { RiComputerLine } from 'react-icons/ri';
+import { HiOutlineUserCircle } from 'react-icons/hi';
+import { DashboardContext } from '@/app/admin/page';
 
-const AdminSidebar = ({ activeOption, onOptionSelect }: AdminSidebarProps,) => {
+const AdminSidebar = () => {
+
+  const context = useContext(DashboardContext);
+  if(!context){
+    return null;
+  }
+  const { section, handleSectionSelect } = context;
 
   // UseStates
   const [isOpen, setIsOpen] = useState(false);
@@ -42,29 +50,34 @@ const AdminSidebar = ({ activeOption, onOptionSelect }: AdminSidebarProps,) => {
           <h1 className='text-xl font-bold'>MilliPixels</h1>
         </div>
 
+        <div className='flex-center flex-col pb-2 border-b-[1px] border-b-[#1f1f1f55]'>
+          <HiOutlineUserCircle size={50} className='relative' />
+          <h2 className='text-2xl font-semibold'>Joy Brar</h2>
+        </div>
+
         {/* Filter Section */}
         <div className=''>
           <button 
-            onClick={() => onOptionSelect("Dashboard")} 
-            className={`sidebar-list-item hover:active border-b-[1px] border-b-[#1f1f1f55] ${activeOption === "Dashboard" ? 'active' : ''}`}
+            onClick={() => handleSectionSelect("Dashboard")} 
+            className={`sidebar-list-item hover:active border-b-[1px] border-b-[#1f1f1f55] ${section === "Dashboard" ? 'active' : ''}`}
           >
             Dashboard
           </button>
           <button 
-            onClick={() => onOptionSelect("Score Distribution")} 
-            className={`sidebar-list-item hover:active ${activeOption === "Score Distribution" ? 'active' : ''}`}
+            onClick={() => handleSectionSelect("Score Distribution")} 
+            className={`sidebar-list-item hover:active ${section === "Score Distribution" ? 'active' : ''}`}
           >
             Scores
           </button>
           <button 
-            onClick={() => onOptionSelect("Top Scorers")} 
-            className={`sidebar-list-item hover:active ${activeOption === "Top Scorers" ? 'active' : ''}`}
+            onClick={() => handleSectionSelect("Top Scorers")} 
+            className={`sidebar-list-item hover:active ${section === "Top Scorers" ? 'active' : ''}`}
           >
             Top Scorers
           </button>
           <button 
-            onClick={() => onOptionSelect("Distribution")} 
-            className={`sidebar-list-item hover:active ${activeOption === "Distribution" ? 'active' : ''}`}
+            onClick={() => handleSectionSelect("Distribution")} 
+            className={`sidebar-list-item hover:active ${section === "Distribution" ? 'active' : ''}`}
           >
             Distribution
           </button>
