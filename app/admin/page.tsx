@@ -28,16 +28,16 @@ export default function Page() {
       <DashboardContext.Provider value={{ section, handleSectionSelect }}>
         <AdminSidebar />
         <div className="md:ml-48 text-center flex-col items-start lg:flex-row text-[#1f1f1f] bg-gray-200 h-full md:min-h-[90vh] flex-center rounded-3xl shadow-lg">
-            {section === "Dashboard" ?
-              <AdminDashboard /> :
-              section === "Score Distribution" ?
-                <PieChartPage data={PieChartData}/> :
-              section === "Top Scorers" ?
-                <TopScorersList data={TopScorersData} /> :
-              section === "Distribution" ?
-                <BarChartPage labels={BarChartData.labels} datasets={BarChartData.datasets} /> :
-              null
-            }
+        {section === "Dashboard" ?
+          <AdminDashboard /> :
+          section === "Score Distribution" ?
+            <PieChartPage data={PieChartData}/> :
+          section === "Top Scorers" ?
+            <TopScorersList data={TopScorersData} /> :
+          section === "Distribution" ?
+            <BarChartPage labels={BarChartData.labels} datasets={BarChartData.datasets} /> :
+          null
+        }
         </div>
       </DashboardContext.Provider>
     </>

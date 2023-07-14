@@ -47,6 +47,10 @@ svg{
 }
 
 @layer components{
+    input{
+        @apply block px-4 py-2 outline-none bg-transparent border-b-[1px] border-b-[#1f1f1f] focus:bg-white focus:border-b-cyan-500 focus:border-b-2 focus:rounded-xl focus:placeholder-cyan-500;
+    }
+
     .blue__gradient{
         @apply bg-gradient-to-br from-[#34BDDF] to-[#00A4CD];
     }

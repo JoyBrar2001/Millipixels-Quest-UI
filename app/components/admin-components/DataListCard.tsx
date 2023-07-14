@@ -22,8 +22,8 @@ export default function DataListCard({ data }: TopScorersProps,) {
           <BsArrowUpRight onClick={() => handleSectionSelect("Top Scorers")} className="absolute top-1.5 left-1.5 cursor-pointer" />
       </div>
       <div className='flex flex-col gap-4 mt-6'>
-        {cutOutData.map(item => (
-          <div className="grid grid-cols-6">
+        {cutOutData.map((item, index) => (
+          <div key={index} className="grid grid-cols-6">
             <p>{item.position}.</p>
             <p className="col-span-2">{item.name}</p>
             <p className="col-span-2">{item.quiz}</p>
