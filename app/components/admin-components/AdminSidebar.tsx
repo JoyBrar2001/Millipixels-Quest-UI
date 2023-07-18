@@ -57,38 +57,45 @@ const AdminSidebar = () => {
         </div>
 
         {/* Filter Section */}
-        <div className=''>
+        <div className='border-b-[1px] border-b-[#1f1f1f55]'>
           <button
             onClick={() => handleSectionSelect("Dashboard")}
-            className={`sidebar-list-item hover:active border-b-[1px] border-b-[#1f1f1f55] ${section === "Dashboard" ? 'active' : ''}`}
+            className={`sidebar-list-item hover:active transition-150 ${section === "Dashboard" ? 'active' : ''}`}
           >
             Dashboard
           </button>
+        </div>
+
+        <div className='border-b-[1px] border-b-[#1f1f1f55]'>
           <button
             onClick={() => handleSectionSelect("Score Distribution")}
-            className={`sidebar-list-item hover:active ${section === "Score Distribution" ? 'active' : ''}`}
+            className={`sidebar-list-item hover:active transition-150 ${section === "Score Distribution" ? 'active' : ''}`}
           >
             Scores
           </button>
           <button
             onClick={() => handleSectionSelect("Top Scorers")}
-            className={`sidebar-list-item hover:active ${section === "Top Scorers" ? 'active' : ''}`}
+            className={`sidebar-list-item hover:active transition-150 ${section === "Top Scorers" ? 'active' : ''}`}
           >
             Top Scorers
           </button>
           <button
             onClick={() => handleSectionSelect("Distribution")}
-            className={`sidebar-list-item hover:active ${section === "Distribution" ? 'active' : ''}`}
+            className={`sidebar-list-item hover:active transition-150 ${section === "Distribution" ? 'active' : ''}`}
           >
             Distribution
           </button>
         </div>
-        
-        <Link href="/admin/questionForm">
-          <button className={`sidebar-list-item hover:active ${section === "Distribution" ? 'active' : ''}`}>
+
+        <div className='border-b-[1px] border-b-[#1f1f1f55]'>
+          <button
+            onClick={() => handleSectionSelect("Add Question")}
+            className={`sidebar-list-item hover:active transition-150 ${section === "Add Question" ? 'active' : ''}`}
+          >
             Add Question
           </button>
-        </Link>
+        </div>
+        
       </div>
     </>
   )

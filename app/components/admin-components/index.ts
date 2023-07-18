@@ -1,4 +1,5 @@
 import AdminSidebar from "./AdminSidebar";
+import AddQuestionForm from "./AddQuestionForm";
 import TitleTextCard from "./TitleTextCard";
 import PieChartCard from "./PieChartCard";
 import PieChartPage from "./PieChartPage";
@@ -8,6 +9,7 @@ import TopScorersList from "./TopScorersList";
 
 export {
     AdminSidebar,
+    AddQuestionForm,
     TitleTextCard,
     PieChartCard,
     PieChartPage,

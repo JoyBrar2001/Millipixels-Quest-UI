@@ -56,10 +56,10 @@ svg{
     }
 
     .sidebar-list-item{
-        @apply w-full flex items-center justify-start gap-2 my-1 px-3 py-1 cursor-pointer;
+        @apply w-full flex items-center justify-start gap-2 my-1 px-3 py-1 cursor-pointer rounded-lg;
     }
     .sidebar-list-item.active{
-        @apply bg-gradient-to-br from-[#34BDDF] to-[#00A4CD] shadow-lg shadow-[#34BDDFCC] text-white rounded-lg;
+        @apply bg-gradient-to-br from-[#34BDDF] to-[#00A4CD] shadow-lg shadow-[#34BDDFCC] text-white;
     }
 
     .question-option-li{

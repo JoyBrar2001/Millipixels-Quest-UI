@@ -3,7 +3,7 @@
 import '@/app/admin/admin.css'
 
 import React, { useState, createContext } from 'react'
-import { AdminSidebar, TitleTextCard, PieChartCard, BarChartCard, DataListCard, TopScorersList, PieChartPage } from '@/app/components/admin-components'
+import { AdminSidebar, TitleTextCard, PieChartCard, BarChartCard, DataListCard, TopScorersList, PieChartPage, AddQuestionForm } from '@/app/components/admin-components'
 // import { AdminSidebar, TitleTextCard, PieChartCard, Card3, Card4 } from './components'
 import { BarChartData, PieChartData, TextCardData, TopScorersData } from '@/constants/data'
 import AdminDashboard from '@/app/components/admin-components/AdminDashboard'
@@ -27,7 +27,7 @@ export default function Page() {
     <>
       <DashboardContext.Provider value={{ section, handleSectionSelect }}>
         <AdminSidebar />
-        <div className="md:ml-48 text-center flex-col items-start lg:flex-row text-[#1f1f1f] bg-gray-200 h-full md:min-h-[90vh] flex-center rounded-3xl shadow-lg">
+        <div className="md:ml-48 text-center flex-col items-start lg:flex-row text-[#1f1f1f] bg-gray-200 h-full flex-center rounded-3xl shadow-lg">
         {section === "Dashboard" ?
           <AdminDashboard /> :
           section === "Score Distribution" ?
@@ -36,6 +36,8 @@ export default function Page() {
             <TopScorersList data={TopScorersData} /> :
           section === "Distribution" ?
             <BarChartPage labels={BarChartData.labels} datasets={BarChartData.datasets} /> :
+          section === "Add Question" ?
+            <AddQuestionForm /> :
           null
         }
         </div>
